@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="tr"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Caner Başaran | İletişim</title>
+<style type="text/css">body{font-size:1.5em;line-height:1.6;color:rgba(0,0,0,0.8);font-family:Times,serif}.container{position:relative;width:100%;max-width:700px;margin:0 auto;padding:0 5px}a{color:inherit}</style></head>
+<body><div class="container">
+<a href="/">anasayfa</a>
+<h3><span id="que"></span> <input id="ans" type="text" size="1"> <button type="button" id="go">(*)</button></h3>
+
+<script>
+    var email = "YmFzYXJhbi5jYW5lckBnbWFpbC5jb20=";
+    var x = Math.floor(5 * Math.random() + 1);
+    var y = Math.floor(5 * Math.random() + 1);
+    document.getElementById("que").innerHTML = x + " + " + y + " =";
+    document.getElementById("go").addEventListener("click", function() {
+        if (x + y === parseInt(document.getElementById("ans").value)) {
+            document.getElementById("que").innerHTML = atob(email);
+        }
+    });
+</script>
+
+<br><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="_blank"><img src="img/creativecommons-by-nc-sa.png"/></a>
+</div></body></html>
