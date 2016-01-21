@@ -8,12 +8,14 @@
 
 <script>
     var email = "YmFzYXJhbi5jYW5lckBnbWFpbC5jb20=";
+    var ricochet = "dTN0endwMmRocjd0c2p3ZQ==";
     var x = Math.floor(5 * Math.random() + 1);
     var y = Math.floor(5 * Math.random() + 1);
     document.getElementById("que").innerHTML = x + " + " + y + " =";
     document.getElementById("go").addEventListener("click", function() {
         if (x + y === parseInt(document.getElementById("ans").value)) {
-            document.getElementById("que").innerHTML = atob(email);
+            document.getElementById("que").innerHTML = "e-mail: " + atob(email) + "<br>" + "ricochet:" + atob(ricochet);
+            document.getElementById("ans").outerHTML = ""; document.getElementById("go").outerHTML = "";
         }
     });
 </script>
