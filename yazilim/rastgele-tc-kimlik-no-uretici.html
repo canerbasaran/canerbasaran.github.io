@@ -18,14 +18,12 @@
         <br><a href="https://github.com/canerbasaran/scripts/blob/master/turkish_id_no_check_and_generate.py" target="_blank">ikisi bir arada(kimlik no doğrulama & üretme) python</a>
         <br><br>https://tckimlik.nvi.gov.tr/Service/KPSPublic.asmx üzerinden <a href="https://github.com/canerbasaran/scripts/blob/master/tcIdVerify.py" target="_blank">T.C. Kimlik No Doğrulama - KPS Servisi python</a>
         <script type="text/javascript">
-            var a = "" + Math.floor(900000001 * Math.random() + 1e8),
-                b = a.split("").map(function(t) {
-                    return parseInt(t, 10)
-                }),
+            var a = "" + (0|9e8 * Math.random() + 1e8),
+                b = a.split("").map(function(t) {return 0|t}),
                 c = b[0] + b[2] + b[4] + b[6] + b[8],
                 d = b[1] + b[3] + b[5] + b[7],
                 e = (7 * c - d) % 10;
-            document.getElementById("tc").textContent = a + ("" + e) + ("" + (d + c + e) % 10)
+            tc.innerHTML = a + ("" + e) + ("" + (d + c + e) % 10)
         </script>
         <br>
         <h6><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="_blank">(cc)by-nc-sa</a></h6>
