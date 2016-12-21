@@ -15,18 +15,10 @@
         <h3><span id="que"></span> <input id="ans" type="text" size="1"> <button type="button" id="go">(*)</button></h3>
 
         <script>
-            var email = "YmFzYXJhbi5jYW5lckBnbWFpbC5jb20=";
-            var ricochet = "dTN0endwMmRocjd0c2p3ZQ==";
-            var x = Math.floor(5 * Math.random() + 1);
-            var y = Math.floor(5 * Math.random() + 1);
-            document.getElementById("que").innerHTML = x + " + " + y + " =";
-            document.getElementById("go").addEventListener("click", function() {
-                if (x + y === parseInt(document.getElementById("ans").value)) {
-                    document.getElementById("que").innerHTML = "e-mail: " + atob(email) + "<br>" + "ricochet:" + atob(ricochet);
-                    document.getElementById("ans").outerHTML = "";
-                    document.getElementById("go").outerHTML = "";
-                }
-            });
+            var x = 0|5 * Math.random() + 1, y = 0|5 * Math.random() + 1;
+            que.innerHTML = x + " + " + y + " =";
+            go.addEventListener("click", function() {
+                if (x + y == ans.value) { alert(atob("YmFzYXJhbi5jYW5lckBnbWFpbC5jb20=")) }});
         </script>
 
         <br>
